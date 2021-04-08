@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeScreen">
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.thesparksfoundation.thesparksfoundationbank.homeScreen"
+        android:label="fragment_home_screen"
+        tools:layout="@layout/fragment_home_screen" >
+        <action
+            android:id="@+id/action_homeScreen_to_allCustomersFragment"
+            app:destination="@id/allCustomersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allCustomersFragment"
+        android:name="com.thesparksfoundation.thesparksfoundationbank.AllCustomersFragment"
+        android:label="AllCustomersFragment"
+        tools:layout="@layout/fragment_all_customers">
+        <action
+            android:id="@+id/action_allCustomersFragment_to_accountHolderParentFragment"
+            app:destination="@id/accountHolderParentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transactionListFragment"
+        android:name="com.thesparksfoundation.thesparksfoundationbank.TransactionListFragment"
+        android:label="TransactionListFragment"
+        tools:layout="@layout/fragment_transaction_list"/>
+    <fragment
+        android:id="@+id/accountHolderParentFragment"
+        android:name="com.thesparksfoundation.thesparksfoundationbank.AccountHolderParentFragment"
+        android:label="AccountHolderParentFragment"
+        tools:layout="@layout/fragment_account_holder_parent">
+        <action
+            android:id="@+id/action_accountHolderParentFragment_to_selectFragment"
+            app:destination="@id/selectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectFragment"
+        android:name="com.thesparksfoundation.thesparksfoundationbank.SelectFragment"
+        android:label="SelectFragment"
+        tools:layout="@layout/fragment_select"/>
+</navigation>
