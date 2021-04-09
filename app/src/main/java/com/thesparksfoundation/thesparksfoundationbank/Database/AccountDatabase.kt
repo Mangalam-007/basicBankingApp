@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase
 @Database(entities=[AccountHolder::class],version=1,exportSchema = false)
 abstract class AccountDatabase: RoomDatabase()
 {
-    abstract val accountholderDao:AccountHolderDao
+    abstract fun accountHolderDao():AccountHolderDao
     companion object{
         @Volatile
         private var INSTANCE: AccountDatabase?=null

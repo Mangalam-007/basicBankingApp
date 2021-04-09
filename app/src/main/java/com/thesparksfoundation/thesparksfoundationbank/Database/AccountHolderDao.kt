@@ -1,13 +1,14 @@
 package com.thesparksfoundation.thesparksfoundationbank.Database
 
-import androidx.room.Dao
-import androidx.room.Insert
-import androidx.room.Update
+import androidx.lifecycle.LiveData
+import androidx.room.*
 
 @Dao
 interface AccountHolderDao {
-    @Insert
-    suspend fun insert(account: AccountHolder)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun addUser(account: AccountHolder)
     @Update
-    suspend fun update(night: AccountHolder)
+    suspend fun update(account: AccountHolder)
+    @Query("SELECT * FROM account_holder ORDER BY accountNumber ASC")
+    fun readAllData(): LiveData<List<AccountHolder>>
 }
