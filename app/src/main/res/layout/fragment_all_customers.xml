@@ -7,19 +7,33 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".AllCustomersFragment">
+    tools:context=".fragments.AllCustomersFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+
+    <EditText
+        android:id="@+id/account_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        />
  <androidx.recyclerview.widget.RecyclerView
      android:id="@+id/tvResult"
      tools:listitem="@layout/list_row_main"
      android:layout_width="match_parent"
      android:layout_height="wrap_content" />
 
-    <Button
-        android:id="@+id/accountList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="next"/>
+
 </LinearLayout>
 </layout>

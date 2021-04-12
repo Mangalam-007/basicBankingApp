@@ -6,7 +6,7 @@
     app:startDestination="@id/homeScreen">
     <fragment
         android:id="@+id/homeScreen"
-        android:name="com.thesparksfoundation.thesparksfoundationbank.homeScreen"
+        android:name="com.thesparksfoundation.thesparksfoundationbank.fragments.homeScreen"
         android:label="fragment_home_screen"
         tools:layout="@layout/fragment_home_screen" >
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/allCustomersFragment"
-        android:name="com.thesparksfoundation.thesparksfoundationbank.AllCustomersFragment"
+        android:name="com.thesparksfoundation.thesparksfoundationbank.fragments.AllCustomersFragment"
         android:label="AllCustomersFragment"
         tools:layout="@layout/fragment_all_customers">
         <action
@@ -24,21 +24,34 @@
     </fragment>
     <fragment
         android:id="@+id/transactionListFragment"
-        android:name="com.thesparksfoundation.thesparksfoundationbank.TransactionListFragment"
+        android:name="com.thesparksfoundation.thesparksfoundationbank.fragments.TransactionListFragment"
         android:label="TransactionListFragment"
         tools:layout="@layout/fragment_transaction_list"/>
     <fragment
         android:id="@+id/accountHolderParentFragment"
-        android:name="com.thesparksfoundation.thesparksfoundationbank.AccountHolderParentFragment"
+        android:name="com.thesparksfoundation.thesparksfoundationbank.fragments.AccountHolderParentFragment"
         android:label="AccountHolderParentFragment"
         tools:layout="@layout/fragment_account_holder_parent">
         <action
             android:id="@+id/action_accountHolderParentFragment_to_selectFragment"
             app:destination="@id/selectFragment" />
+        <argument
+            android:name="currentAccount"
+            app:argType="com.thesparksfoundation.thesparksfoundationbank.model.AccountHolder" />
     </fragment>
     <fragment
         android:id="@+id/selectFragment"
-        android:name="com.thesparksfoundation.thesparksfoundationbank.SelectFragment"
+        android:name="com.thesparksfoundation.thesparksfoundationbank.fragments.SelectFragment"
         android:label="SelectFragment"
-        tools:layout="@layout/fragment_select"/>
+        tools:layout="@layout/fragment_select">
+        <argument
+            android:name="currentAccount"
+            app:argType="com.thesparksfoundation.thesparksfoundationbank.model.AccountHolder" />
+        <argument
+            android:name="amountTo"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_selectFragment_to_allCustomersFragment"
+            app:destination="@id/allCustomersFragment" />
+    </fragment>
 </navigation>

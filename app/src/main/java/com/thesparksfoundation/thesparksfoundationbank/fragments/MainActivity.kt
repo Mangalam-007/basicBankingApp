@@ -1,7 +1,8 @@
-package com.thesparksfoundation.thesparksfoundationbank
+package com.thesparksfoundation.thesparksfoundationbank.fragments
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.thesparksfoundation.thesparksfoundationbank.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

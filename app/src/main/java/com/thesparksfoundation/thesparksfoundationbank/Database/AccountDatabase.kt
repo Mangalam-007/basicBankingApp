@@ -4,8 +4,9 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.thesparksfoundation.thesparksfoundationbank.model.AccountHolder
 
-@Database(entities=[AccountHolder::class],version=1,exportSchema = false)
+@Database(entities=[AccountHolder::class],version=2,exportSchema = false)
 abstract class AccountDatabase: RoomDatabase()
 {
     abstract fun accountHolderDao():AccountHolderDao

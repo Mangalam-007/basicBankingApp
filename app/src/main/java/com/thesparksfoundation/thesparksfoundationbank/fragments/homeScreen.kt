@@ -1,4 +1,4 @@
-package com.thesparksfoundation.thesparksfoundationbank
+package com.thesparksfoundation.thesparksfoundationbank.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,16 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.thesparksfoundation.thesparksfoundationbank.R
 import com.thesparksfoundation.thesparksfoundationbank.databinding.FragmentHomeScreenBinding
 
 class homeScreen : Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
        val binding = DataBindingUtil.inflate<FragmentHomeScreenBinding>(inflater
-               ,R.layout.fragment_home_screen,container
+               , R.layout.fragment_home_screen,container
            ,false)
         binding.button.setOnClickListener {view:View->
             view.findNavController().navigate(R.id.action_homeScreen_to_allCustomersFragment)

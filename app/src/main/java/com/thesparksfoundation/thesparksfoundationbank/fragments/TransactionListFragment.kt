@@ -1,10 +1,11 @@
 
-package com.thesparksfoundation.thesparksfoundationbank
+package com.thesparksfoundation.thesparksfoundationbank.fragments
 
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.databinding.DataBindingUtil
+import com.thesparksfoundation.thesparksfoundationbank.R
 import com.thesparksfoundation.thesparksfoundationbank.databinding.FragmentTransactionListBinding
 
 
@@ -15,7 +16,7 @@ class TransactionListFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val binding=DataBindingUtil.inflate<FragmentTransactionListBinding>(inflater
-        ,R.layout.fragment_transaction_list,container,false)
+        , R.layout.fragment_transaction_list,container,false)
 
         return binding.root
     }
