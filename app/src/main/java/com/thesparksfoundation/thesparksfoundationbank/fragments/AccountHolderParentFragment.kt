@@ -56,7 +56,10 @@ class AccountHolderParentFragment : Fragment() {
                 {Toast.makeText(activity,"Insufficient Balance", Toast.LENGTH_SHORT).show()}
                 else
                 {
-                    val action = AccountHolderParentFragmentDirections.actionAccountHolderParentFragmentToSelectFragment(current,amountTo)
+                    val action = AccountHolderParentFragmentDirections.actionAccountHolderParentFragmentToSelectFragment(
+                        current,
+                        amountTo,
+                    )
                     view.findNavController().navigate(action)
                 }
             }

@@ -24,7 +24,7 @@
     </fragment>
     <fragment
         android:id="@+id/transactionListFragment"
-        android:name="com.thesparksfoundation.thesparksfoundationbank.fragments.TransactionListFragment"
+        android:name="com.thesparksfoundation.thesparksfoundationbank.Transaction.TransactionListFragment"
         android:label="TransactionListFragment"
         tools:layout="@layout/fragment_transaction_list"/>
     <fragment
@@ -54,4 +54,9 @@
             android:id="@+id/action_selectFragment_to_allCustomersFragment"
             app:destination="@id/allCustomersFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/transactionFragment2"
+        android:name="com.thesparksfoundation.thesparksfoundationbank.TransactionFragment"
+        android:label="fragment_transaction"
+        tools:layout="@layout/fragment_transaction" />
 </navigation>

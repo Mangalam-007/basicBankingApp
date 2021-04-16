@@ -30,13 +30,14 @@ class AllCustomersFragment: Fragment() {
         //navigation
 
         //insert data
-        binding.enter.setOnClickListener {
-            val name:String?=binding.accountName.text.toString()
-            val balance: String? =binding.balance.text.toString()
-            val bal: Int? = balance?.toInt()
-            val account= AccountHolder(0L, name, bal,"Yes")
-            mAccountViewModel.addAccount(account)
-        }
+//        binding.enter.setOnClickListener {
+//            val name:String?=binding.accountName.text.toString()
+//            val balance: String? =binding.balance.text.toString()
+//            val bal: Int? = balance?.toInt()
+//            val account= AccountHolder(0L, name, bal,"Yes")
+//            mAccountViewModel.addAccount(account)
+//        }
+        //mAccountViewModel.addAccount(AccountHolder(0L,"Sumit Kumar", 40000, "Yes"))
         //recyclerView
         val adapter = impoAdapter()
         val recyclerView=binding.tvResult

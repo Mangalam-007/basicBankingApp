@@ -9,7 +9,7 @@ interface AccountHolderDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun addAccount(account: AccountHolder)
     @Update
-    suspend fun update(account: AccountHolder)
+    suspend fun updateUser(account: AccountHolder)
     @Query("SELECT * FROM account_holder ORDER BY accountNumber ASC")
     fun readAllData(): LiveData<List<AccountHolder>>
 }
